@@ -24,8 +24,25 @@ export default function JokesRoute() {
           </h1>
         </div>
       </header>
-      <main>
-        <Outlet />
+      <main className="jokes-main">
+        <div className="container">
+          <div className="jokes-list">
+            <Link to=".">Get a randon joke</Link>
+            <p>Here are a few more jokes to check out:</p>
+            <ul>
+              <li>
+                <Link to="some-joke-id">Hippo</Link>
+              </li>
+            </ul>
+            <Link to="new" className="button">
+              Add your own
+            </Link>
+          </div>
+
+          <div className="jokes-outlet">
+            <Outlet />
+          </div>
+        </div>
       </main>
     </div>
   );
